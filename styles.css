@@ -42,11 +42,6 @@ body {
 
 }
 /* ------------------------------- 3. Layout --------------------------------------- */
-body {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
 
 nav {
     display:flex;
@@ -66,10 +61,9 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
-    flex-basis: 400px;
+    flex-basis: 500px;
     flex-grow: 0;
     flex-shrink: 1;
-
 }
 
 a {
@@ -95,9 +89,33 @@ a {
     font-family: 'Roboto', sans-serif;
     text-transform: uppercase;
     box-shadow: 5px 6px 3px #5722CD;
-
 }
 /* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: o 20px;
+}
+
+.default-text {
+    max-width: 850px;
+    text-align: center;
+}
+
+.default-area-padding {
+    padding: 100px 0;
+}
 
 /* --------------- 3.2 Other --------------------------- */
 
@@ -113,6 +131,7 @@ header {
     flex-grow: 0;
     flex-shrink: 0;
     position: relative;
+    color: white;
 
 }
 
@@ -123,27 +142,18 @@ header {
     flex-direction: column;
     font-size: 24px;
 }
-h1, h3 {
-    color: white;
-    margin: 0 auto;
-
-}
 
 h1 {
     font-weight: 500;
     font-size: 45px;
+    padding-bottom: 25px;
 }
 
-h2 {
+h5 {
     font-weight: 400;
     padding: 20px;
     color: #5722CD;
-}
-
-
-h3 {
-    font-weight: 300;
-    padding: 30px;
+    font-size: 30px;
 }
 
 img {
@@ -169,11 +179,18 @@ img {
     display: flex;
     flex-direction: column;
     text-align: center;
-    padding: 50px 200px;
 
 }
 
 .contact-question {
     padding-top: 100px ;
 }
+    color: white;
+    text-decoration: none;
+}
+
+.click-here-link {
+    color: #5722CD;
+}
+
 /* ------------------------------- 5. Media Queries -------------------------------- */
