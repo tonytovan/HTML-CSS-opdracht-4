@@ -30,18 +30,114 @@
     --lightgrey:#F3F6F9;
     --grey:#7A7A7A;
 }
-/* ------------------------------- 2. Typography ----------------------------------- */
-h1 h2 h3 h4 h5 h6 {
-    font-family: 'Merriweather', serif;
-}
 
 body {
     font-family: 'Roboto', sans-serif;
     font-weight: 300;
     font-size: 20px;
+}
 
+/* ------------------------------- 2. Typography ----------------------------------- */
+h1 h2 h3 h4 h5 h6 {
+    font-family: 'Merriweather', serif;
+}
+
+h1, h2 {
+    font-weight: 500;
+    font-size: 46px;
+    padding: 16px 0;
+}
+
+h4 {
+    font-size: 35px;
+    font-weight: 400;
+}
+
+h5 {
+    font-size: 32px;
+    padding: 12px 0;
+}
+
+h6 {
+    font-weight: 400;
+    padding: 20px;
+    color: #5722CD;
+    font-size: 30px;
+    text-align: center;
 }
 /* ------------------------------- 3. Layout --------------------------------------- */
+
+
+/* --------------- 3.1 Reusables ----------------------- */
+.outer-container {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.inner-container {
+    flex-basis: 1400px;
+    flex-grow: 0;
+    flex-shrink: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 20px;
+}
+
+.default-text {
+    max-width: 850px;
+    text-align: center;
+}
+
+.default-area-padding {
+    padding: 100px 0;
+}
+
+/* --------------- 3.2 Other --------------------------- */
+
+
+
+
+/* ------------------------------- 4. Areas ---------------------------------------- */
+
+/* --------------- 4.1 Header ------------------------- */
+header {
+    background:linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    position: relative;
+    color: white;
+}
+
+.head-section {
+    padding: 100px 0;
+    margin-bottom: 80px;
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+}
+
+img {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.white-icon {
+    display: block;
+    position: absolute;
+    height: 100px;
+    width: 80px;
+    background-image: url(./assets/squiggle_line_stripe.svg);
+    bottom: 0;
+    margin: 120px 0 0 0;
+    left: calc(50% - 40px);
+}
 
 nav {
     display:flex;
@@ -93,39 +189,16 @@ a {
     text-transform: uppercase;
     box-shadow: 5px 6px 3px #5722CD;
 }
-/* --------------- 3.1 Reusables ----------------------- */
-.outer-container {
-    width: 100%;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+/* --------------- 4.2 Introduction ------------------- */
+.introduction-section {
+    background-color: white;
 }
 
-.inner-container {
-    flex-basis: 1400px;
-    flex-grow: 0;
-    flex-shrink: 1;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 0 20px;
+.contact-question {
+    padding-top: 100px ;
 }
 
-.default-text {
-    max-width: 850px;
-    text-align: center;
-}
-
-.default-area-padding {
-    padding: 100px 0;
-}
-
-/* --------------- 3.2 Other --------------------------- */
-
-
-
-
-/* ------------------------------- 4. Areas ---------------------------------------- */
+/* --------------- 4.3 Main ------------------- */
 .main-article-section {
     background-color: #F3F6F9;
 }
@@ -159,6 +232,13 @@ a {
     flex-shrink: 0;
 }
 
+.inner-article-main-adjust {
+    flex-basis: 400px;
+    flex-grow: 0;
+    flex-shrink: 0;
+    padding-left: 30px;
+}
+
 .waves-image {
     background-image: url(./assets/squiggle_line.svg);
     width: 60px;
@@ -166,11 +246,7 @@ a {
     margin-top: 20px;
 }
 
-h4 {
-    font-size: 35px;
-    font-weight: 400;
-}
-
+.inner-article-main-adjust p,
 .inner-article-main p {
     margin: 45px 0;
 }
@@ -182,66 +258,7 @@ h4 {
     letter-spacing: 2px;
     color: #5722CD;
 }
-/* --------------- 4.1 Header ------------------------- */
-header {
-    background:linear-gradient(90deg, rgba(72,69,228,1) 0%, rgba(87,34,205,1) 100%);
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    flex-basis: 400px;
-    flex-grow: 0;
-    flex-shrink: 0;
-    position: relative;
-    color: white;
-}
 
-.head-section {
-    padding: 100px 0;
-    margin-bottom: 80px;
-    display: flex;
-    flex-direction: column;
-    font-size: 24px;
-}
-
-h1 {
-    font-weight: 500;
-    font-size: 45px;
-    padding-bottom: 25px;
-}
-
-
-img {
-    max-width: 100%;
-    max-height: 100%;
-}
-
-.white-icon {
-    display: block;
-    position: absolute;
-    height: 100px;
-    width: 80px;
-    background-image: url(./assets/squiggle_line_stripe.svg);
-    bottom: 0;
-    margin: 120px 0 0 0;
-    left: calc(50% - 40px);
-}
-
-
-/* --------------- 4.2 Introduction ------------------- */
-.introduction-section {
-    background-color: white;
-}
-
-.contact-question {
-    padding-top: 100px ;
-}
-
-h5 {
-    font-weight: 400;
-    padding: 20px;
-    color: #5722CD;
-    font-size: 30px;
-}
 /* --------------- 4.4 Services ------------------- */
 .services-section {
     background-color: white;
@@ -331,12 +348,6 @@ h5 {
     text-transform: uppercase;
     box-shadow: 5px 6px 3px #5722CD;
 }
-
-h2 {
-    padding-bottom: 10px;
-    font-size: 38px;
-}
-
 /* --------------- 4.6 Footer ------------------- */
 footer {
     background: #0C0C0C;
@@ -346,7 +357,62 @@ footer {
     font-size: 14px;
 }
 
-
-
-
 /* ------------------------------- 5. Media Queries -------------------------------- */
+@media  (max-width: 700px) {
+
+    h1, h2 {
+        font-size: 36px;
+        padding: 12px 0;
+    }
+
+    h4 {
+        font-size: 25px;
+        font-weight: 400;
+    }
+
+    h5 {
+        font-size: 22px;
+        padding: 12px 0;
+    }
+
+    h6 {
+        font-weight: 400;
+        font-size: 20px;
+    }
+
+    .menu {
+        justify-content: space-evenly;
+    }
+
+    .contact-question {
+        padding: 50px 0 0 0;
+        text-align: center;
+    }
+
+    .intro-headers {
+        padding: 50px 0 50px 0;
+    }
+
+    .article-main:nth-of-type(odd),
+    .article-main {
+        flex-direction: column;
+        margin: 0;
+    }
+
+    .picture-main {
+        flex-basis: auto;
+    }
+}
+    .inner-article-main,
+    .inner-article-main-adjust {
+        padding: 0 0 50px 0;
+        flex-basis: auto;
+    }
+
+    .services-section > div {
+       padding: 50px 0 50px 0;
+    }
+
+
+
+
